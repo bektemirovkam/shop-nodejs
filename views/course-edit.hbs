@@ -1,0 +1,38 @@
+<div class="row">
+    <form class="col s12 course-edit" action="/courses/edit" method="post" novalidate>
+        <h2 class="center-align">Редактировать курс</h2>
+        <p class="center-align auth-error">{{error}}</p>
+        <div class="row">
+            <div class="input-field col s12">
+                <input id="title" name="title" type="text" class="validate" autocomplete="none" required
+                    value="{{course.title}}">
+                <label for="title">Название курса</label>
+                <span class="helper-text" data-error="Введите название"></span>
+            </div>
+        </div>
+        <div class="row">
+            <div class="input-field col s5">
+                <input id="price" name="price" type="number" class="validate" autocomplete="none" min='1' required
+                    value="{{course.price}}" />
+                <label for="price">Цена курса</label>
+                <span class="helper-text" data-error="Введите цену"></span>
+            </div>
+        </div>
+        <div class="row">
+            <div class="input-field col s12">
+                <input id="img" type="text" name="img" class="validate" autocomplete="none" required
+                    value="{{course.img}}">
+                <label for="img">URL картинки</label>
+                <span class="helper-text" data-error="Введите url картинки"></span>
+            </div>
+        </div>
+        <input type="hidden" name="id" value="{{course._id}}">
+        <input type="hidden" name="_csrf" value="{{csrf}}">
+        <button type="submit" class="btn btn-primary">Редактировать курс</button>
+    </form>
+    <form class="col s12" action="/courses/delete" method="POST">
+        <input type="hidden" name="id" value="{{course._id}}">
+        <input type="hidden" name="_csrf" value="{{csrf}}">
+        <button class="btn red" type="submit">Удалить курс</button>
+    </form>
+</div>

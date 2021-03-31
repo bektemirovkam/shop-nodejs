@@ -1,0 +1,47 @@
+.nav-wrapper {
+  padding: 0 30px;
+}
+.price {
+  font-weight: bold;
+}
+.price::after {
+  content: "₽";
+  font-weight: bold;
+  margin-left: 3px;
+}
+.price.big {
+  font-size: 20px;
+}
+.course {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+}
+.course img {
+  max-width: 500px;
+}
+.card-image img {
+  max-width: 500px;
+}
+.card-action.actions {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.course-edit {
+  margin-bottom: 20px;
+}
+.login {
+  padding: 30px 10px;
+}
+.auth-error {
+  color: red;
+}
+.avatar {
+  max-width: 300px;
+}
+.profile {
+  padding: 20px 0;
+}

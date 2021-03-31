@@ -1,0 +1,32 @@
+<div class="row">
+    <form class="col s12" action="/add" method="post" novalidate>
+        <h2 class="center-align">Добавить курс</h2>
+        <p class="center-align auth-error">{{error}}</p>
+        <div class="row">
+            <div class="input-field col s12">
+                <input id="title" name="title" type="text" class="validate" autocomplete="none" value="{{data.title}}"
+                    required>
+                <label for="title">Название курса</label>
+                <span class="helper-text" data-error="Введите название"></span>
+            </div>
+        </div>
+        <div class="row">
+            <div class="input-field col s5">
+                <input id="price" name="price" type="number" class="validate" autocomplete="none" min='1'
+                    value="{{data.price}}" required>
+                <label for="price">Цена курса</label>
+                <span class="helper-text" data-error="Введите цену"></span>
+            </div>
+        </div>
+        <div class="row">
+            <div class="input-field col s12">
+                <input id="img" type="text" name="img" class="validate" autocomplete="none" value="{{data.img}}"
+                    required>
+                <label for="img">URL картинки</label>
+                <span class="helper-text" data-error="Введите url картинки"></span>
+            </div>
+        </div>
+        <input type="hidden" name="_csrf" value="{{csrf}}">
+        <button class="btn btn-primary">Добавить курс</button>
+    </form>
+</div>
